@@ -1,10 +1,4 @@
-# Binary Calculator — SOFE3980U Lab 2
-
-A Spring Boot application that performs arithmetic and bitwise operations on unsigned binary numbers, exposed through both a web interface and a REST API.
-
-Built for SOFE3980U (Software Quality) at Ontario Tech University.
-
----
+### Lab 2: Implementing and Testing Web Application and API Service using Apache Maven and Spring Boot
 
 ## What it does
 
