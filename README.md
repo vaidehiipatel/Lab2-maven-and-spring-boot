@@ -1,4 +1,4 @@
-### Lab 2: Implementing and Testing Web Application and API Service using Apache Maven and Spring Boot
+# Lab 2: Implementing and Testing Web Application and API Service using Apache Maven and Spring Boot
 
 ## What it does
 
@@ -15,7 +15,6 @@ Four operations are supported:
 
 Each is reachable two ways: through an HTML form in the browser, and through a REST endpoint that returns either a plain string or a JSON object.
 
----
 
 ## Requirements
 
@@ -32,8 +31,6 @@ export JAVA_HOME=$(/usr/libexec/java_home -v 11)
 
 Verify with `java -version` — it must report 11.x before you build.
 
----
-
 ## Running
 
 ```bash
@@ -47,7 +44,6 @@ Then open http://localhost:8080
 
 Stop the server with `Ctrl+C`.
 
----
 
 ## Testing
 
@@ -67,8 +63,6 @@ mvn clean test
 Tests use Spring's `MockMvc`, which dispatches simulated HTTP requests through the controller layer without starting a server. Assertions cover status codes, view names, model attributes, response bodies, and JSON fields.
 
 Each operator is tested against normal operation, zero operands, identity operands, and operands of unequal length. Multiplication additionally has a maximum-carry case (`1111 * 1111`) that stresses the carry chain inside the shift-and-add loop. The web application also covers failure paths — invalid operator, missing operator, and empty operand.
-
----
 
 ## API reference
 
@@ -103,7 +97,6 @@ Returns a `BinaryAPIResult`:
 }
 ```
 
----
 
 ## Project structure
 
@@ -133,9 +126,8 @@ BinaryCalculatorWebapp/
         └── HelloAPIControllerTest.java
 ```
 
----
 
-## Implementation notes
+## Conclusion
 
 **`Binary.java`** stores the value as a normalized string. The constructor rejects any character outside `0` and `1` (falling back to `"0"`), strips leading zeros, and treats `null` and empty input as zero.
 
@@ -147,4 +139,3 @@ BinaryCalculatorWebapp/
 
 **`BinaryAPIController`** is a `@RestController`, so return values are serialized directly rather than resolved as view names.
 
----
