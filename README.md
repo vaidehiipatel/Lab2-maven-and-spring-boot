@@ -97,36 +97,6 @@ Returns a `BinaryAPIResult`:
 }
 ```
 
-
-## Project structure
-
-```
-BinaryCalculatorWebapp/
-├── pom.xml
-└── src/
-    ├── main/
-    │   ├── java/com/ontariotechu/sofe3980U/
-    │   │   ├── Application.java              Spring Boot entry point
-    │   │   ├── Binary.java                   Binary arithmetic and bitwise logic
-    │   │   ├── BinaryController.java         Web form handling
-    │   │   ├── BinaryAPIController.java      REST endpoints
-    │   │   ├── BinaryAPIResult.java          JSON response model
-    │   │   ├── HelloController.java
-    │   │   ├── HelloAPIController.java
-    │   │   └── APIResult.java
-    │   └── resources/templates/
-    │       ├── calculator.html               Input form
-    │       ├── result.html                   Result display
-    │       ├── error.html                    Invalid operator
-    │       └── hello.html
-    └── test/java/com/ontariotechu/sofe3980U/
-        ├── BinaryControllerTest.java
-        ├── BinaryAPIControllerTest.java
-        ├── HelloControllerTest.java
-        └── HelloAPIControllerTest.java
-```
-
-
 ## Conclusion
 
 **`Binary.java`** stores the value as a normalized string. The constructor rejects any character outside `0` and `1` (falling back to `"0"`), strips leading zeros, and treats `null` and empty input as zero.
